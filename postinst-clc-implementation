@@ -1,0 +1,13 @@
+case "$1" in
+    configure)
+	    if [ -x /usr/lib/common-lisp/bin/"#IMPLEMENTATION#.sh" ] &&
+		which register-common-lisp-implementation > /dev/null; then
+		register-common-lisp-implementation "#IMPLEMENTATION#"
+	    fi
+	    ;;
+    abort-upgrade|abort-remove|abort-deconfigure)
+	    if which register-common-lisp-implementation > /dev/null; then
+		unregister-common-lisp-implementation "#IMPLEMENTATION#"
+	    fi
+	    ;;
+esac

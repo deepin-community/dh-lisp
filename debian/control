@@ -1,0 +1,21 @@
+Source: dh-lisp
+Section: lisp
+Priority: optional
+Maintainer: Debian Common Lisp Team <debian-common-lisp@lists.debian.org>
+Uploaders: Peter Van Eynde <pvaneynd@debian.org>, Desmond O. Chang <dochang@gmail.com>
+Build-Depends: debhelper (>= 7.0.50~)
+Build-Depends-Indep: perl
+Standards-Version: 3.9.1
+
+Package: dh-lisp
+Architecture: all
+Depends: ${misc:Depends}, debhelper (>= 7), ${perl:Depends}
+Enhances: debhelper
+Description: Debhelper to support Common Lisp related packages
+ This debhelper addon targets Debian package maintainers of packages
+ related to Common Lisp. It automates the processes of making a
+ package conform to the Common Lisp in Debian Manual:
+ .
+ It adds dependencies to required Common Lisp implementations if
+ precompiled object files for them are included in the package.
+

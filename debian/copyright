@@ -1,0 +1,29 @@
+This is dh-lisp, written and maintained by René van Bevern <rvb@pro-linux.de>
+on Fri,  5 Aug 2005 22:43:11 +0200.
+
+The original source can always be found at:
+	http://cl-debian.alioth.debian.org/repository/rvb/dh-lisp
+
+Copyright (C) 2005  René van Bevern
+              2009  Peter Van Eynde
+              2010  Desmond O. Chang
+
+License:
+
+  This program is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this package; if not, write to the Free Software
+  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+  02110-1301, USA.
+
+On Debian systems, the complete text of the GNU General
+Public License can be found in `/usr/share/common-licenses/GPL'.

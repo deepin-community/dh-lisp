@@ -1,0 +1,173 @@
+dh-lisp (0.7.2) unstable; urgency=medium
+
+  * Team upload.
+  * Set Maintainer to debian-common-lisp@l.d.o.
+  * Remove Vcs-* and Homepage fields. This package will not be migrated to
+    Salsa, since it's scheduled for removal ASAP.
+
+ -- Sébastien Villemot <sebastien@debian.org>  Sun, 08 Apr 2018 10:57:19 +0200
+
+dh-lisp (0.7.1+nmu1) unstable; urgency=medium
+
+  * Non-maintainer upload.
+  * Replace obsolete 'perl5' build dependency with 'perl'
+    Closes: #786675
+
+ -- Damyan Ivanov <dmn@debian.org>  Tue, 21 Jul 2015 17:48:21 +0000
+
+dh-lisp (0.7.1) unstable; urgency=low
+
+  * declare/initialize $implementation (Closes: #616676)
+  * debian/README.Debian
+    + add README.Debian for the incompatible change since 0.7.0
+
+ -- Desmond O. Chang <dochang@gmail.com>  Sun, 06 Mar 2011 23:04:51 +0800
+
+dh-lisp (0.7.0) unstable; urgency=low
+
+  * do not link asd files
+  * do not generate maintainer scripts for c-l-c
+  * do not generate c-l-c dependency for library packages
+  * do not install implementation control script
+  * do not create maintainer scripts for c-l-c
+  * do not generate c-l-c dependency for implementation packages
+  * debian/control
+    + change Standards-Version to 3.9.1
+    + modify package description
+
+ -- Desmond O. Chang <dochang@gmail.com>  Tue, 04 Jan 2011 06:59:16 +0800
+
+dh-lisp (0.6.6) unstable; urgency=low
+
+  * escape regex metachars in the pathname of ASD files (Closes: #588294)
+  * add dh addon for dh_lisp
+  * debian/copyright:
+    + add copyright info about Peter Van Eynde and me
+  * debian/control:
+    + add me into Uploaders
+    + change Standards-Version to 3.9.0
+  * debian/source/format:
+    + change source package format to 3.0 (native)
+  * debian/rules:
+    + use debhelper only, remove cdbs related code
+
+ -- Desmond O. Chang <dochang@gmail.com>  Fri, 16 Jul 2010 02:19:29 +0800
+
+dh-lisp (0.6.5) unstable; urgency=low
+
+  * gitify, take ownership. (Closes: #548775)
+  * Updated Standards Version no changes
+  * Now in the Lisp Section
+
+ -- Peter Van Eynde <pvaneynd@debian.org>  Sat, 07 Nov 2009 15:33:57 +0100
+
+dh-lisp (0.6.4) unstable; urgency=low
+
+  * dh_lisp: remove pod2man error
+
+ -- René van Bevern <rvb@debian.org>  Fri, 13 Feb 2009 16:40:40 +0100
+
+dh-lisp (0.6.3) experimental; urgency=low
+
+  * upload to experimental because of lenny freeze
+  * postinst-*, prerm-*: do not generate full pathnames to
+    common-lisp-controller's binaries in maintainer scripts of Common Lisp
+    packages
+  * debian/control:
+    + set Maintainer to pkg-common-lisp and myself as uploader
+    + remove duplicate build dependencies
+    + bump policy version
+    + use Homepage field and point it to the pkg-common-lisp project
+
+ -- René van Bevern <rvb@debian.org>  Wed, 11 Feb 2009 00:58:56 +0100
+
+dh-lisp (0.6.2) unstable; urgency=low
+
+  * debian/control: 
+    + ASDF: another (not advanced) system definition facility.
+      (closes: #369019)
+    + update Standards-Version
+    + cdbs to Build-Depends instead of Build-Depends-Indep
+
+ -- René van Bevern <rvb@debian.org>  Tue, 30 May 2006 18:43:40 +0200
+
+dh-lisp (0.6.1) unstable; urgency=low
+
+  [René van Bevern]
+  * debian/control: update e-mail address
+  
+  [Peter van Eynde]
+  * fix some spelling mistakes in the documentation (i.e. manual page)
+
+ -- René van Bevern <rvb@debian.org>  Tue, 18 Apr 2006 08:56:49 +0200
+
+dh-lisp (0.6) unstable; urgency=low
+
+  * Support for ECL
+  
+    + does not misinterpret ECL's FASLs as Clisp's anymore.
+
+    + automatically adds dependency on current ECL if ECL's FASLs are
+      found
+  
+    + for the above to work, dh_lisp now guesses object type by looking
+      inside the files instead of looking at their names
+  
+    + depend on common-lisp-controller 5.11 by default
+  
+ -- René van Bevern <rvb@progn.org>  Fri, 17 Mar 2006 11:08:59 +0100
+
+dh-lisp (0.5) unstable; urgency=low
+
+  * update package description with information of target groups
+
+ -- René van Bevern <rvb@pro-linux.de>  Tue, 28 Nov 2005 18:25:15 +0100
+
+dh-lisp (0.4) unstable; urgency=low
+
+  * re-add previously removed error message as a non-dying warning
+
+  * do not try to add implementation-dependencies if dh_lisp is called to
+    install this implementation (no curcular dependencies)
+
+  * offer a switch '-d' to optionally disable the generation of
+    implementation-dependencies
+
+  * do not add dependencies for common-lisp-controller if scripts are not
+    being generated
+
+  * generate common-lisp-controller dependencies with version 4.23 instead
+    of 4.2, it includes several security updates and is needed for slime
+    (closes: #335974)
+
+ -- René van Bevern <rvb@pro-linux.de>  Sat, 29 Oct 2005 14:20:57 +0200
+
+dh-lisp (0.3) unstable; urgency=low
+
+  * dh_lisp: do not die if implementation for a binary format is not
+    installed on the system, this is bad for building implementations
+    themselves
+  
+  * debian/copyright: update address of the Free Software Foundation
+
+ -- René van Bevern <rvb@pro-linux.de>  Fri, 21 Oct 2005 18:08:43 +0200
+
+dh-lisp (0.2) unstable; urgency=low
+
+  * add dependencies on appropriate CL implementations if precompiled
+    files are found in the package (works for SBCL, Clisp and CMUCL)
+
+  * scan the whole package for interesting data (asd, fasl, fas, x86f)
+    instead of only usr/share/common-lisp/source
+
+  * debian/control:
+    + add debhelper to Build-Depends:, because it is used in clean target
+    + update description with new functionality
+
+ -- René van Bevern <rvb@pro-linux.de>  Sat,  8 Oct 2005 14:10:07 +0200
+
+dh-lisp (0.1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- René van Bevern <rvb@pro-linux.de>  Fri,  5 Aug 2005 22:43:11 +0200

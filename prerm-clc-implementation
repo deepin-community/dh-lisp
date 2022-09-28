@@ -1,0 +1,5 @@
+if [ "$1" = "remove" ] || [ "$1" = "upgrade" ] || [ "$1" = "deconfigure" ]; then
+    if which unregister-common-lisp-implementation > /dev/null; then
+	unregister-common-lisp-implementation "#IMPLEMENTATION#"
+    fi
+fi

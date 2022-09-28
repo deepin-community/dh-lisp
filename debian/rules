@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_installman:
+	pod2man dh_lisp > dh_lisp.1
+	dh_installman

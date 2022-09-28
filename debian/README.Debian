@@ -1,0 +1,17 @@
+For dh-lisp 0.7.0
+=================
+
+dh-lisp 0.7.0 has been released.  This is the first step of the removal
+of c-l-c.  From now on, new common lisp packages will not depend on
+c-l-c.
+
+Users should not use CLC:CLC-REQUIRE any more.  It would be removed in
+the future.
+
+Developers had better get rid of dh-lisp from 'Build-Depends'.  For
+compatibility, keeping dh-lisp is safe, but it does nothing.
+
+For the implementation maintainers, <impl>.sh and install-clc.lisp are
+useless now.  Please consider redebianizing.
+
+ -- Desmond O. Chang <dochang@gmail.com>

@@ -1,0 +1,4 @@
+if [ "$1" = "configure" ] &&
+    which register-common-lisp-source > /dev/null; then
+    register-common-lisp-source "#SYSTEMDIR#"
+fi

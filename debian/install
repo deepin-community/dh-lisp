@@ -1,0 +1,4 @@
+dh_lisp usr/bin
+prerm-* usr/share/debhelper/autoscripts
+postinst-* usr/share/debhelper/autoscripts
+lisp.pm usr/share/perl5/Debian/Debhelper/Sequence
